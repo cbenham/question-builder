@@ -4,15 +4,18 @@
         var expected = options['expected'];
         var answer = options['answer'];
         
-        var html = '<div id="question-' + questionIndex + '">' + question + "<br>";
+        var answerHtml = "";
+        var answerClass = "correct-answer";
         
         if(expected === answer) {
-            html += "Correctly answered: " + expected;
+            answerHtml += "Correctly answered: " + expected;
         } else {
-            html += "expected: " + expected + "<br>"+ "but got: " + answer + '</div>';
+            answerClass = "incorrect-answer";
+            answerHtml += "expected: " + expected + "<br>"+ "but got: " + answer + '</div>';
         }
         
-        $(this).append(html);
+        var html = '<div id="question-' + questionIndex + '" class="' + answerClass + '">' + question + "<br>";
+        $(this).append(html + answerHtml);
         
         questionIndex++;
     };
