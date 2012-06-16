@@ -32,7 +32,7 @@ describe("Lessons", function() {
         it("should show the question, expected answer and actual answer", function() {
             loadFixtures("question.html");
             $("#question-container").question("What is 1 + 4?", {expected: 5, answer: 0});
-            expect($("#question-container #question-0")).toHaveHtml("What is 1 + 4?<br>my answer: 5<br>your answer: 0");
+            expect($("#question-container #question-0")).toHaveHtml("What is 1 + 4?<br>My answer: 5<br>Your answer: 0");
         });
         
         it("should be styled with a red bar", function() {
