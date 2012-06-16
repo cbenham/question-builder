@@ -1,7 +1,7 @@
-correct-answer {
+.correct-answer {
     background-color: green;
 }
 
-incorrect-answer {
+.incorrect-answer {
     background-color: red;
 }
