@@ -2,7 +2,7 @@ describe("Lessons", function() {
     jasmine.getFixtures().fixturesPath = "spec/fixtures";
     
     beforeEach(function() {
-        $("#question-container").reset();
+        QuestionBuilder.builder.reset();
     });
     
     describe("resetting the question", function() {
@@ -11,7 +11,7 @@ describe("Lessons", function() {
             $("#question-container").question("Arbitrary question", {expected: "Irrelevant", answer: "Unimportant"});
             expect($("#question-container div")).toHaveId("question-0");
 
-            $("#question-container").reset();
+            QuestionBuilder.builder.reset();
             
             expect($("#question-container")).toBeEmpty();
         });
@@ -21,7 +21,7 @@ describe("Lessons", function() {
             $("#question-container").question("Arbitrary question", {expected: "Irrelevant", answer: "Unimportant"});
             expect($("#question-container div")).toHaveId("question-0");
             
-            $("#question-container").reset();
+            QuestionBuilder.builder.reset();
             
             $("#question-container").question("Another question", {expected: "Irrelevant", answer: "Unimportant"});
             expect($("#question-0").size()).toEqual(1);
