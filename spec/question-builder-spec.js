@@ -6,10 +6,10 @@ describe("Lessons", function() {
     });
     
     describe("resetting the question", function() {
-        it("should clear the container of questions", function() {
+        it("should remove all questions", function() {
             loadFixtures("question.html");
+
             $("#question-container").question("Arbitrary question", {expected: "Irrelevant", answer: "Unimportant"});
-            expect($("#question-container div")).toHaveId("question-0");
 
             QuestionBuilder.builder.reset();
             
@@ -19,7 +19,6 @@ describe("Lessons", function() {
         it("should reset the counter", function() {
             loadFixtures("question.html");
             $("#question-container").question("Arbitrary question", {expected: "Irrelevant", answer: "Unimportant"});
-            expect($("#question-container div")).toHaveId("question-0");
             
             QuestionBuilder.builder.reset();
             
