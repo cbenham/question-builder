@@ -1,7 +1,7 @@
 .correct-answer {
-    background-color: green;
+    background-color: lightGreen;
 }
 
 .incorrect-answer {
-    background-color: red;
+    background-color: salmon;
 }
