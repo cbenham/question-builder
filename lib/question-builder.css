@@ -5,3 +5,7 @@
 .incorrect-answer {
     background-color: salmon;
 }
+
+.question {
+  margin-top: 10px;
+}
