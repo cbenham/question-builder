@@ -1,5 +1,3 @@
-ParseConfig = {};
-
 describe("Lessons", function() {
   jasmine.getFixtures().fixturesPath = "spec/fixtures";
   
